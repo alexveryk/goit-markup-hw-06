@@ -6,6 +6,8 @@
   --color-text-dark-threme: #ffffff;
   --color-btn-filter-hover: #ffffff;
   --footer-address-text-color: rgba(255, 255, 255, 0.6);
+  --placeholder-color: rgba(117, 117, 117, 0.5);
+  --modal-form-color-border: rgba(33, 33, 33, 0.2);
 
   --backround-color-light: #ffffff;
   --backround-color-dark: #2f303a;
@@ -784,6 +786,7 @@ img.projects-img {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  transition: fill var(--duration-and-timing-function);
 }
 
 .btn-close-modal:hover,
@@ -797,7 +800,7 @@ img.projects-img {
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .modal-form {
@@ -807,18 +810,19 @@ img.projects-img {
 
 .modal-form-desc {
   font-size: 12px;
-  line-height: 1.67;
+  line-height: 1.16;
   letter-spacing: 0.01em;
-  color: #757575;
+  color: var(--second-color-page);
   margin-bottom: 4px;
 }
 
 .modal-form-input {
   width: 100%;
   height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid var(--modal-form-color-border);
   border-radius: 4px;
   padding: 12px 12px 12px 42px;
+  transition: border var(--duration-and-timing-function);
 }
 
 .modal-form-input:focus ~ .form-icon {
@@ -829,6 +833,7 @@ img.projects-img {
 .modal-form-comment:focus {
   outline: none;
   border: 1px solid var(--accent-color);
+  transition: border var(--duration-and-timing-function);
 }
 
 .input-container-name,
@@ -843,13 +848,14 @@ img.projects-img {
   top: 50%;
   transform: translateY(-50%);
   left: 12px;
+  transition: fill var(--duration-and-timing-function);
 }
 
 .modal-form-comment {
   width: 100%;
   height: 120px;
   resize: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid var(--modal-form-color-border);
   border-radius: 4px;
   padding: 12px 16px;
   margin-bottom: 20px;
@@ -859,7 +865,8 @@ img.projects-img {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  color: var(--placeholder-color);
+  //placeholder-color
 }
 
 .modal-btn {
@@ -893,6 +900,8 @@ img.projects-img {
 
 .modal-form-license {
   margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .check-icon {
@@ -901,6 +910,7 @@ img.projects-img {
   border: 2px solid var(--main-color-page);
   border-radius: 2px;
   cursor: pointer;
+  transition: backround-color var(--duration-and-timing-function);
 }
 
 .check-icon-active {
@@ -909,7 +919,11 @@ img.projects-img {
 
 .form-license-check {
   display: inline-flex;
-  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--second-color-page);
 }
 
 .check-license:checked + .form-license-check > .check-icon {
@@ -923,9 +937,11 @@ img.projects-img {
 }
 
 .check-license:focus + .form-license-check > .check-icon {
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 2px var(--accent-color);
 }
 
 .form-license-link {
   color: var(--accent-color);
 }
+
+/* ************** /MODAL ************** */
